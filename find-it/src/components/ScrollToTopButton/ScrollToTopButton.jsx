@@ -22,11 +22,13 @@ const ScrollToTopButton = () => {
     });
   };
 
+// Add event listener to show button when scrolling
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
+// Return the button to scroll to top
   return (
     <div className="scroll-to-top">
       {isVisible && (
