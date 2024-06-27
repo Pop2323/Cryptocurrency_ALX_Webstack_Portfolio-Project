@@ -5,12 +5,14 @@ import { CurrencyContext } from '../../context/CurrencyApi';
 import { TailSpin } from 'react-loader-spinner';
 import CoinChart from '../../components/CoinChart/CoinChart';
 
+// Coin component
 const Coin = () => {
   const { coinId } = useParams();
   const [coin, setCoin] = useState(null);
   const [coinChart, setCoinChart] = useState(null);
   const { currency } = useContext(CurrencyContext);
 
+// Fetch coin data from the API
   const fetchCoin = async () => {
     const options = {
       method: 'GET',
@@ -30,6 +32,7 @@ const Coin = () => {
     }
   };
 
+// Fetch coin chart data from the API
   const fetchCoinChart = async () => {
     const options = {
       method: 'GET',
@@ -49,11 +52,13 @@ const Coin = () => {
     }
   };
 
+// useEffect to fetch coin and coin chart data
   useEffect(() => {
     fetchCoin();
     fetchCoinChart();
   }, [currency]);
 
+// Function to truncate description to a certain number of lines
   const truncateDescription = (description, maxLines) => {
     if (!description) return '';
 
