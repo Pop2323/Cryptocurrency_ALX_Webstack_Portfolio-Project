@@ -7,6 +7,7 @@ import { CurrencyContext } from '../../context/CurrencyApi.jsx';
 const Navbar = () => {
     const { setCurrency } = useContext(CurrencyContext);
 
+// Function to handle currency change
     const handleCurrencyChange = (event) => {
         switch (event.target.value) {
             case 'usd':
@@ -23,7 +24,7 @@ const Navbar = () => {
                 break;
         }
     };
-
+// Navbar component
     return (
         <div className="navbar">
             <Link to="/home" className="nav-left">
