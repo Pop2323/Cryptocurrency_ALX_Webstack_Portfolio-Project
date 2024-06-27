@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/logo1.png';
 import { CurrencyContext } from '../../context/CurrencyApi';
 
+// Home component
 const Home = () => {
   const { coins, currency } = useContext(CurrencyContext);
   const [currencyData, setCurrencyData] = useState([]);
   const [search, setSearch] = useState("");
 
+// Function to handle search input
   const handleSearch = (e) => {
     setSearch(e.target.value);
     if (e.target.value === "") {
@@ -17,12 +19,14 @@ const Home = () => {
     }
   };
 
+// Function to handle search button
   const handleSearchBtn = async (e) => {
     e.preventDefault();
     const searchParts = search.split(" - ");
     const searchTerm = searchParts[0];
     const symbolTerm = searchParts[1];
 
+// Filter the currency data based on the search term
     const fetchCoin = coins.filter((coin) => {
       return (
         coin.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -33,10 +37,12 @@ const Home = () => {
     setCurrencyData(fetchCoin);
   };
 
+// useEffect to update the currency data
   useEffect(() => {
     setCurrencyData(coins);
   }, [coins]);
 
+// Home component
   return (
     <div className="home">
       <div className="home-content">
