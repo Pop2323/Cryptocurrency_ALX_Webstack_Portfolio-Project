@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './Info.css';
 import { TailSpin } from 'react-loader-spinner';
 
+// Info component
 const Info = () => {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+// Fetch description data from public folder
   useEffect(() => {
     const fetchCoins = async () => {
       try {
@@ -24,10 +26,12 @@ const Info = () => {
         setLoading(false);
       }
     };
-
+  
+// useEffect to fetch description data
     fetchCoins();
   }, []);
 
+// Return the description data
   if (loading) {
     return (
       <div className="spinner-container">
@@ -45,6 +49,7 @@ const Info = () => {
     return <div>Error: {error}</div>;
   }
 
+// Return the description data
   return (
     <div className="Container">
         <div className="head">
