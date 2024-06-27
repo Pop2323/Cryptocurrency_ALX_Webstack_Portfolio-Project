@@ -3,6 +3,7 @@ import { createContext, useContext, useState, useEffect } from 'react';
 // Create the CurrencyContext
 export const CurrencyContext = createContext();
 
+// CurrencyApi component
 const CurrencyApi = (props) => {
     const [coins, setCoins] = useState([]);
     const [currency, setCurrency] = useState({
@@ -26,6 +27,7 @@ const CurrencyApi = (props) => {
         }
     };
 
+// useEffect to fetch currency data
     useEffect(() => {
         fetchCurrencyData();
     }, [currency]);
@@ -36,7 +38,7 @@ const CurrencyApi = (props) => {
         currency,
         setCurrency,
     };
-
+// Return the CurrencyContext.Provider
     return (
         <CurrencyContext.Provider value={contextVal}>
             {props.children}
