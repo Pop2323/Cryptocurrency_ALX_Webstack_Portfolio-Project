@@ -1,0 +1,230 @@
+.home {
+    padding: 0 10px;
+    padding-bottom: 100px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 70px auto;
+    max-width: 800px;
+    gap: 20px;
+}
+
+.home-content h1 {
+    font-size: max(4vw, 2.5rem);
+    font-family: "Playwrite DE Grund", cursive;
+}
+
+.logo-banner {
+    width: 35%;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.home-content b {
+    color: #ff6600;
+    font-family: "Playball", cursive;
+    letter-spacing: 6px;
+
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-family: "Playwrite DE Grund", cursive;
+}
+
+.home-content form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    width: 80%;
+    padding: 10px;
+}
+
+.home-content input {
+    flex: 1;
+    outline: none;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: "Playwrite DE Grund", cursive;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    background: transparent;
+    border: 2px solid #ff6600;
+    color: white;
+}
+
+input[type="text"] { 
+    caret-color: wheat;
+} 
+
+::placeholder {
+    color: #ff6600;
+    opacity: 1; /* Firefox */
+}
+
+.home-content button {
+    padding: 3px 10px;
+    font-size: 1rem;
+    font-family: "Playwrite DE Grund", cursive;
+    background: #ff6600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.home-content button:hover {
+    background: #eb7120;
+    color: white;
+}
+
+.crypto-tb {
+    /* max-width: 800px; */
+    max-width: 900px;
+    margin: auto;
+    /* background-image: linear-gradient(#eb7120, #ff6600); */
+    background-image: linear-gradient(#976b4ed6, #ff660070);
+    border-radius: 10px 10px 0 0;
+}
+
+.coin-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.coin-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.tb-layout {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
+    padding: 10px 15px;
+    align-items: center;
+    border: 1px solid #292929;
+}
+
+.tb-layout p {
+    font-size: 14px;
+    font-family: "Playwrite DE Grund", cursive;
+    /* font-weight: bold; */
+    /* color: black; */
+    color: white;
+}
+
+.tb-layout .green {
+    color: #00ff00;
+}
+
+.tb-layout .red {
+    /* color: #800000; */
+    color: #ff7254;
+}
+
+.tb-layout p:nth-last-child(2) {
+    text-align: center;
+}
+
+.tb-layout p:last-child {
+    /* text-align: right; */
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .home-content {
+        margin: 20px auto;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .logo-banner {
+        width: 25%;
+        height: 100px;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .home-content form {
+        width: 100%;
+    }
+
+    .home-content input {
+        font-size: 12px;
+    }
+
+    .home-content button {
+        font-size: 0.7rem;
+    }
+
+    .crypto-tb {
+        border-radius: 10px;
+    }
+
+    .tb-layout {
+        display: grid;
+        grid-template-columns: 0.25fr 2fr 1fr 1fr;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .coin-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        /* width: 90%; */
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .coin-container .coin-name {
+        text-align: center;
+    }
+
+
+    .high-price {
+        display: none;
+    }
+
+    .tb-layout p {
+        font-size: 12px;
+    }
+
+    .tb-layout .green {
+        color: #00ff00;
+    }
+
+    .tb-layout .red {
+        /* color: #800000; */
+        color: #ff7254;
+
+    }
+
+    .tb-layout p:nth-last-child(2) {
+        text-align: center;
+    }
+
+    /* .tb-layout p:last-child {
+        text-align: right;
+    } */
+}

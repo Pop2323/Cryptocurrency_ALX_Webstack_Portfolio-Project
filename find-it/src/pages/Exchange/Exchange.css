@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .container h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 2.5em;
+  }
+  
+  .exchange-rates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .exchange-rate {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1px solid #ff660046;
+    padding: 10px;
+    background-image: linear-gradient(to right, #f7660527, #be620d28);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #0000001a;
+    width: 100%;
+  }
+  
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .error-message {
+    text-align: center;
+    color: red;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
