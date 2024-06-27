@@ -17,6 +17,7 @@ const CoinChart = ({ coinChart }) => {
     }
   }, [coinChart]);
 
+// chart options for the line chart
   const options = {
     title: "Coin Price Chart",
     chartArea: { width: "80%", height: "70%" },
