@@ -3,6 +3,8 @@ import React from 'react';
 import './Footer.css';
 import { FaFacebook, FaTwitter, FaInstagram, FaHeart, FaGithub, FaLinkedin } from "react-icons/fa";
 
+
+// Footer component
 const Footer = () => {
   return (
     <div>

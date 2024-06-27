@@ -7,6 +7,7 @@ const CoinChart = ({ coinChart }) => {
   const [coinLineChart, setLineCoinChart] = useState([["Date", "Price"]]);
   const { currency } = useContext(CurrencyContext);
 
+// useEffect to update the line chart data
   useEffect(() => {
     let chartData = [["Date", "Price"]];
     if (coinChart && coinChart.prices) {
