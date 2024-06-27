@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './Exchange.css';
 import { TailSpin } from 'react-loader-spinner';
 
+// Exchange component
 const Exchange = () => {
   const [exchangeRates, setExchangeRates] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+// Fetch exchange rates from the API
   const fetchExchange = async () => {
     const options = {
       method: 'GET',
@@ -28,10 +30,12 @@ const Exchange = () => {
     }
   };
 
+// useEffect to fetch exchange rates
   useEffect(() => {
     fetchExchange();
   }, []);
 
+// Return the exchange rates
   if (loading) {
     return (
       <div className="spinner-container">
@@ -49,6 +53,7 @@ const Exchange = () => {
     return <div className="error-message">Error: {error}</div>;
   }
 
+// Return the exchange rates
   return (
     <div className="container">
       <h1><span>E</span>xchange Rates</h1>
