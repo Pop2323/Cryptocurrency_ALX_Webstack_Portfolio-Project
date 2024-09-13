@@ -1,0 +1,57 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    min-height: 61.5vh;
+  }
+  
+  .about-container h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Playwrite DE Grund", cursive !important;
+    font-size: 2.5em;
+  }
+
+    .about-container h2 {
+        font-size: 1.25em;
+        text-align: center;
+        width: 100%;
+        font-family: "Playwrite DE Grund", cursive;
+        font-weight: bold;
+    }
+  
+  .about-container li {
+    font-size: 1.2em;
+    font-family: "Playwrite DE Grund", cursive;
+    width: 100%;
+    text-align: start;
+    margin: 0 auto;
+    padding: 6px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    
+    .about-container h1 {
+        font-size: 2em;
+    }
+    
+    .about-container h2 {
+        font-size: 1em;
+        text-align: start;
+    }
+    
+    .about-container li {
+        font-size: 1em;
+        text-align: start;
+    }
+}
